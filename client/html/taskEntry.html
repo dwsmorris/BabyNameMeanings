@@ -1,0 +1,49 @@
+    <!-- Entry view. -->
+<div id="taskEntry">
+
+	<form name="taskEntryForm" id="taskEntryForm">
+
+		<!-- Category. -->
+		<label for="taskCategory" class="select">Category</label>
+		<select name="category" id="taskCategory">
+			<option value="personal">Personal</option>
+			<option value="work">Work</option>
+		</select>
+
+		<!-- Title and notes. -->
+		<label for="taskTitle" class="cssRequired">Title</label>
+		<input type="text" name="title" id="taskTitle" data-clear-btn="true">
+		<label for="taskNotes">Notes</label>
+		<textarea name="notes" id="taskNotes"></textarea>
+
+		<!-- Status. -->
+		<label for="taskCompleted">Completed</label>
+		<select name="completed" id="taskCompleted" data-role="slider">
+			<option value="no">No</option>
+			<option value="yes">Yes</option>
+		</select>
+
+		<!-- Priority. -->
+		<label for="taskPriority">Priority</label>
+		<input type="range" name="priority" id="taskPriority"
+			   value="1" min="1" max="5" step="1" data-highlight="true" />
+
+		<!-- Due date. -->
+		<label for="taskDueDate">Due Date</label>
+		<input name="dueDate" id="taskDueDate" type="text" data-role="datebox"
+			   data-options='{"mode":"datebox","enablePopup":true,"useFocus":true,"useButton":false,"useNewStyle":true}'>
+
+		<!-- Buttons. -->
+		<button class="doSave" type="button" data-theme="e" data-icon="plus"
+				id="taskSaveButton">
+			Save
+		</button>
+		<button type="button" data-theme="e" data-icon="minus"
+				class="doDelete"
+				id="taskDeleteButton" {{deletedisabledstatus}}>
+			Delete
+		</button>
+
+	</form>
+
+</div>

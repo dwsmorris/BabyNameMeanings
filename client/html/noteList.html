@@ -1,0 +1,26 @@
+    <!-- List view. -->
+    <div id="noteList">
+
+      <!-- Advanced filters. -->
+      <div data-role="collapsible">
+        <h3>Advanced Filters</h3>
+        <form name="noteFilterForm" id="noteFilterForm">
+          <label for="noteFilterCategory" class="select">Category</label>
+			<select name="category" id="noteFilterCategory" class="noteFilterCategory">
+				<option value="all">All</option>
+				<option value="personal">Personal</option>
+				<option value="work">Work</option>
+			</select>
+        </form>
+      </div>
+
+      <div>&nbsp;</div>
+
+      <!-- List. -->
+      <div>
+        <ul data-role="listview" data-filter="true" data-inset="true"
+          data-autodividers="true" id="noteListUL"></ul>
+      </div>
+
+    </div>
+ 

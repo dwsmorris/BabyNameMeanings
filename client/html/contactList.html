@@ -1,0 +1,25 @@
+    <!-- List view. -->
+<div id="contactList">
+
+	<!-- Advanced filters. -->
+	<div data-role="collapsible">
+		<h3>Advanced Filters</h3>
+		<form name="contactFilterForm" id="contactFilterForm">
+			<label for="contactFilterCategory" class="select">Category</label>
+			<select name="category" id="contactFilterCategory" class="contactFilterCategory">
+				<option value="all">All</option>
+				<option value="personal">Personal</option>
+				<option value="work">Work</option>
+			</select>
+		</form>
+	</div>
+
+	<div>&nbsp;</div>
+
+	<!-- List. -->
+	<div>
+		<ul data-role="listview" data-filter="true" data-inset="true"
+			data-autodividers="true" id="contactListUL"></ul>
+	</div>
+
+</div>

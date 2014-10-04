@@ -1,0 +1,25 @@
+    <!-- List view. -->
+<div id="appointmentList">
+
+	<!-- Advanced filters. -->
+	<div data-role="collapsible">
+		<h3>Advanced Filters</h3>
+		<form name="appointmentFilterForm" id="appointmentFilterForm">
+			<label for="appointmentFilterCategory" class="select">Category</label>
+			<select name="filterCategory" id="appointmentFilterCategory"
+					class="appointmentFilterCategory">
+				<option value="all">All</option>
+				<option value="personal">Personal</option>
+				<option value="work">Work</option>
+			</select>
+			<label for="appointmentFilterAllDay">All Day?</label>
+			<input type="checkbox" name="filterAllDay"
+				   id="appointmentFilterAllDay"
+				   class="appointmentFilterAllDay" />
+		</form>
+	</div>
+
+	<!-- List. -->
+	<ul data-role="listview" data-inset="true" id="appointmentListUL"></ul>
+
+</div>

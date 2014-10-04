@@ -1,0 +1,29 @@
+     <!-- Entry view. -->
+    <div id="noteEntry">
+
+      <form name="noteEntryForm" id="noteEntryForm">
+
+        <!-- Category. -->
+        <label for="noteCategory" class="select">Category</label>
+        <select name="category" id="noteCategory">
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+        </select>
+
+        <!-- Title and text. -->
+        <label for="noteTitle" class="cssRequired">Title</label>
+        <input type="text" name="title" id="noteTitle" data-clear-btn="true">
+        <label for="noteText" class="cssRequired">Text</label>
+        <textarea name="text" id="noteText"></textarea>
+
+        <!-- Buttons. -->
+        <button class="doSave" type="button" data-theme="e" data-icon="plus"
+          id="noteSaveButton">Save</button>
+        <button type="button" data-theme="e" data-icon="minus"
+          class="doDelete"
+          id="noteDeleteButton" {{deleteDisabledStatus}}>Delete</button>
+
+      </form>
+
+    </div>
+
