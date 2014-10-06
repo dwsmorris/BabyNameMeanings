@@ -50,7 +50,7 @@ require({
 		content: "frontPage",
 		list: true,
 		//ajaxURLPrefix: "http://marbleorganizer.eu01.aws.af.cm", // remote
-		ajaxURLPrefix: "http://127.0.0.1:80", // local
+		ajaxURLPrefix: "http://127.0.0.1:80/marbleOrganizer", // local
 		updateID: null, // The ID of the item being updated, or null when doing an add.
 		networkAvailable: true // Flag: is network connectivity available?
 	};
