@@ -7,7 +7,7 @@ define(function () {
 	 */
 	return function (lib, state) {
 		$.mobile.loading("show");
-		$.ajax({ url: state.ajaxURLPrefix + "/clear" })
+		$.ajax({ url: state.ajaxURLPrefix + "clear" })
 		.done(function (inResponse) {
 			// Now clear localStorage.
 			window.localStorage.clear();

@@ -124,7 +124,7 @@ define(function () {
 
 		// Send to server.
 		$.ajax({
-			url: state.ajaxURLPrefix + "/" + inType + uid, type: httpMethod,
+			url: state.ajaxURLPrefix + inType + uid, type: httpMethod,
 			contentType: "application/json", data: frmData
 		})
 		.done(function (inResponse) {

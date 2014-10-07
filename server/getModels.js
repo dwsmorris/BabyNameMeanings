@@ -32,10 +32,10 @@ define(function () {
 
 		// Define database models for all entities.
 		return {
-			appointment: lib.mongoose.model("appointment", schemas.appointment),
-			contact: lib.mongoose.model("contact", schemas.contact),
-			note: lib.mongoose.model("note", schemas.note),
-			task: lib.mongoose.model("task", schemas.task)
+			"marbleOrganizer.appointment": lib.mongoose.model("marbleOrganizer.appointment", schemas.appointment),
+			"marbleOrganizer.contact": lib.mongoose.model("marbleOrganizer.contact", schemas.contact),
+			"marbleOrganizer.note": lib.mongoose.model("marbleOrganizer.note", schemas.note),
+			"marbleOrganizer.task": lib.mongoose.model("marbleOrganizer.task", schemas.task)
 		};
 	};
 
