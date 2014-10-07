@@ -28,7 +28,8 @@ define([
 	"./populateList",
 	"./viewEditItem",
 	"./clearData",
-	"./loadFrame"
+	"./loadFrame",
+	"./loadAboutPanel"
 ], function (
 	loadMain,
 	loadFrontPage,
@@ -57,7 +58,8 @@ define([
 	populateList,
 	viewEditItem,
 	clearData,
-	loadFrame
+	loadFrame,
+	loadAboutPanel
 ) {
 
 	return {
@@ -88,7 +90,8 @@ define([
 		populateList: populateList,
 		viewEditItem: viewEditItem,
 		clearData: clearData,
-		loadFrame: loadFrame
+		loadFrame: loadFrame,
+		loadAboutPanel: loadAboutPanel
 	};
 
 });
