@@ -29,7 +29,8 @@ define([
 	"./viewEditItem",
 	"./clearData",
 	"./loadFrame",
-	"./loadAboutPanel"
+	"./loadAboutPanel",
+	"./loadConfirmDialog"
 ], function (
 	loadMain,
 	loadFrontPage,
@@ -59,7 +60,8 @@ define([
 	viewEditItem,
 	clearData,
 	loadFrame,
-	loadAboutPanel
+	loadAboutPanel,
+	loadConfirmDialog
 ) {
 
 	return {
@@ -91,7 +93,8 @@ define([
 		viewEditItem: viewEditItem,
 		clearData: clearData,
 		loadFrame: loadFrame,
-		loadAboutPanel: loadAboutPanel
+		loadAboutPanel: loadAboutPanel,
+		loadConfirmDialog: loadConfirmDialog
 	};
 
 });
