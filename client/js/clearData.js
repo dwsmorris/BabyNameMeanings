@@ -17,7 +17,9 @@ define(function () {
 				content: "frontPage",
 				list: true
 			}), "Operation succeeded", "Data cleared", function (lib, state) {
-				lib.loadMain(lib, state);
+				lib.downloadServerData(lib, lib._.extend({}, state, {
+					$ui: state.$page
+				}));
 			});
 		})
 		.fail(function (inXHR, inStatus) {
