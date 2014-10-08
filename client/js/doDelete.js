@@ -19,7 +19,7 @@ define(function () {
 		state.updateID = null;
 
 		// Send to server.
-		$.ajax({ url: state.ajaxURLPrefix + "/" + inType + uid, type: "delete" })
+		$.ajax({ url: state.ajaxURLPrefix + inType + uid, type: "delete" })
 		.done(function (inResponse) {
 			// Remove item from localStorage.
 			window.localStorage.removeItem(inType + "_" + inResponse);

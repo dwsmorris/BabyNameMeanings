@@ -80,22 +80,22 @@ define(function () {
 		};
 
 		// Get all appointments.
-		$.ajax({ url: state.ajaxURLPrefix + "/appointment" })
+		$.ajax({ url: state.ajaxURLPrefix + "appointment" })
 		.done(function (inResponse) { completeLoad("appointment", inResponse); })
 		.fail(function (inXHR, inStatus) { completeLoad("appointment", null); });
 
 		// Get all contacts.
-		$.ajax({ url: state.ajaxURLPrefix + "/contact" })
+		$.ajax({ url: state.ajaxURLPrefix + "contact" })
 		.done(function (inResponse) { completeLoad("contact", inResponse); })
 		.fail(function (inXHR, inStatus) { completeLoad("contact", null); });
 
 		// Get all notes.
-		$.ajax({ url: state.ajaxURLPrefix + "/note" })
+		$.ajax({ url: state.ajaxURLPrefix + "note" })
 		.done(function (inResponse) { completeLoad("note", inResponse); })
 		.fail(function (inXHR, inStatus) { completeLoad("note", null); });
 
 		// Get all tasks.
-		$.ajax({ url: state.ajaxURLPrefix + "/task" })
+		$.ajax({ url: state.ajaxURLPrefix + "task" })
 		.done(function (inResponse) { completeLoad("task", inResponse); })
 		.fail(function (inXHR, inStatus) { completeLoad("task", null); });
 
