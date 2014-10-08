@@ -1,10 +1,10 @@
 ﻿/*globals define*/
 
 define(function () {
-
+	
 	// Define database schemas for all entities.
 	return function (lib, state) {
-		var schemas= {
+		var schemas = {
 			appointment: lib.mongoose.Schema({
 				category: "string", title: "string", description: "string",
 				location: "string", date: "date", allDay: "boolean",
@@ -29,13 +29,13 @@ define(function () {
 				completed: "boolean", priority: "number", dueDate: "date"
 			})
 		};
-
+		
 		// Define database models for all entities.
 		return {
-			appointment: lib.mongoose.model("appointment", schemas.appointment),
-			contact: lib.mongoose.model("contact", schemas.contact),
-			note: lib.mongoose.model("note", schemas.note),
-			task: lib.mongoose.model("task", schemas.task)
+			"babyNameMeanings.appointment": lib.mongoose.model("babyNameMeanings.appointment", schemas.appointment),
+			"babyNameMeanings.contact": lib.mongoose.model("babyNameMeanings.contact", schemas.contact),
+			"babyNameMeanings.note": lib.mongoose.model("babyNameMeanings.note", schemas.note),
+			"babyNameMeanings.task": lib.mongoose.model("babyNameMeanings.task", schemas.task)
 		};
 	};
 
