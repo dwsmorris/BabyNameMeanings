@@ -13,13 +13,12 @@ define(function () {
 			window.localStorage.clear();
 			$.mobile.loading("hide");
 
-			lib.loadInfoDialog(lib, lib.$.extend(true, {}, state, {
-				content: "frontPage",
-				list: true
-			}), "Operation succeeded", "Data cleared", function (lib, state) {
-				lib.downloadServerData(lib, lib._.extend({}, state, {
-					$ui: state.$page
-				}));
+			lib.loadInfoDialog(lib, state, "Operation succeeded", "Data cleared", function (lib, state) {
+                lib.loadMain(lib, lib._.extend({}, state, {
+                    $ui: state.$page,
+                    content: "frontPage",
+                    list: true
+                }));
 			});
 		})
 		.fail(function (inXHR, inStatus) {
