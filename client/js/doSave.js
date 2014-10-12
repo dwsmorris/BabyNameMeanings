@@ -133,7 +133,7 @@ define(function () {
 			// two fields that MongoDB would add.
 			frmData = frmData.slice(0, frmData.length - 1);
 			frmData = frmData + ",\"__v\":\"0\",\"_id\":\"" + inResponse + "\"}";
-			window.localStorage.setItem(inType + "_" + inResponse, frmData);
+			//window.localStorage.setItem(inType + "_" + inResponse, frmData);
 			// Now repopulate the listview from localStorage.  This is NOT the most
 			// efficient way to go about doing this, but it's expedient in terms of
 			// writing the code and for small data sets the performance will be fine.
@@ -141,11 +141,12 @@ define(function () {
 			// Now update the UI as appropriate and we're done.
 			$.mobile.loading("hide");
 
-			lib.loadInfoDialog(lib, lib.$.extend(true, {}, state, {
-				content: inType,
-				list: true
-			}), "Success", "Save to server complete", function (lib, state) {
-				lib.loadMain(lib, state);
+			lib.loadInfoDialog(lib, state, "Success", "Save to server complete", function (lib, state) {
+				lib.loadMain(lib, lib.$.extend(true, {}, state, {
+                    content: inType,
+                    list: true,
+                    localStorage: lib._.extend({}, state.localStorage, lib._.object(inType +"_" + inResponse, frmData))
+                }));
 			});
 
 		})

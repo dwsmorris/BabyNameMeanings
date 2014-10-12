@@ -16,11 +16,13 @@ require({
 }, [
 	"underscore",
 	"./js/lib",
-	"./thirdParty/mustache"
+	"./thirdParty/mustache",
+	"./thirdParty/async"
 ], function (
 	_,
 	customLib,
-	mustache
+	mustache,
+	async
 ) {
 	
 	/**
@@ -41,16 +43,20 @@ require({
 	var lib = $.extend(true, {}, customLib, {
 		$: $,
 		_: _,
-		mustache: mustache
+		mustache: mustache,
+		async: async
 	});
+
+	var projectName = "babyNameMeanings";
 	
 	var state = {
 		$ui: $("#homePage"),
 		$page: $("#homePage"),
 		content: "frontPage",
 		list: true,
-		ajaxURLPrefix: "http://server.eu01.aws.af.cm/babyNameMeanings.", // remote
-		//ajaxURLPrefix: "http://127.0.0.1:80/babyNameMeanings.", // local
+		project: projectName,
+		//ajaxURLPrefix: "http://server.eu01.aws.af.cm/" + projectName + ".", // remote
+		ajaxURLPrefix: "http://127.0.0.1:80/" + projectName + ".", // local
 		updateID: null, // The ID of the item being updated, or null when doing an add.
 		networkAvailable: true // Flag: is network connectivity available?
 	};
