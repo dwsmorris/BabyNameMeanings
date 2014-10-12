@@ -37,34 +37,20 @@ define(function () {
 							return extend.apply(null, entries);
 						}
 					}, {});
-
-					var types = ["appointment", "contact", "note", "task"];
-					/*for (var i = 0; i < types.length; i += 1) {
-						var typ = types[i];
-						var dat = fetching["data_" + typ];
-						var len = dat.length;
-						var lst = window.localStorage;
-						for (var j = 0; j < len; j += 1) {
-							var obj = dat[j];
-							lst.setItem(typ + "_" + obj._id, JSON.stringify(obj));
-						}
-					}*/
-
 				} else {
-
 					// One or more entities were not fetched, which we take to mean there's
 					// a connectivity problem, so let the user know what's up.  Whatever
 					// data is in localStorage will be used for this run.
 					networkavailable = false;
 					lib.showConnectivityMessage(lib, state);
-
 				}
 
 				// Unmask screen and we're done here.
 				$.mobile.loading("hide");
 
 				lib.loadFrame(lib, lib.$.extend(true, {}, state, {
-					networkavailable: networkavailable
+					networkavailable: networkavailable,
+					localStorage: localStorage
 				}));
 
 		};

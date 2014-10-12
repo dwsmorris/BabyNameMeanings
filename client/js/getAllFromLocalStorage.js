@@ -12,10 +12,10 @@ define(function () {
 		var items = [];
 
 		// First, get the data of the appropriate type from localStorage.
-		var lst = window.localStorage;
+		var lst = state.localStorage;
 		for (var itemKey in lst) {
 			if (itemKey.indexOf(inType) === 0) {
-				var sObj = lst.getItem(itemKey);
+				var sObj = lst[itemKey];
 				items.push(JSON.parse(sObj));
 			}
 		}
