@@ -18,14 +18,6 @@ define(function () {
 		}));
 
 		/*
-		// Populate data.
-		var itemData = JSON.parse(window.localStorage.getItem(inType + "_" + inID));
-		for (fld in itemData) {
-			if (fld != "_id" && fld != "__v") {
-				$("#" + inType + "EntryForm [name=" + fld + "]").val(itemData[fld]);
-			}
-		}
-
 		// Enable that delete button too!
 		//$("#" + inType + "DeleteButton").button("enable");
 		*/

@@ -145,7 +145,7 @@ define(function () {
 				lib.loadMain(lib, lib.$.extend(true, {}, state, {
                     content: inType,
                     list: true,
-                    localStorage: lib._.extend({}, state.localStorage, lib._.object(inType +"_" + inResponse, frmData))
+                    localStorage: lib._.extend({}, state.localStorage, lib._.object([inType +"_" + inResponse], [JSON.parse(frmData)]))
                 }));
 			});
 

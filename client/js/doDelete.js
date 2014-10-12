@@ -30,8 +30,9 @@ define(function () {
 			// Now update the UI as appropriate and we're done.
 			$.mobile.loading("hide");
 
-            lib.loadInfoDialog(lib, state, "Success", "Delete from server complete", function (lib, state) {
-                lib.loadMain(lib, lib.$.extend(true, {}, state, {
+			lib.loadInfoDialog(lib, state, "Success", "Delete from server complete", function (lib, state) {
+				var reducedLocalStorage = lib._.omit(state.localStorage, inType + "_" + inResponse);
+                lib.loadMain(lib, lib._.extend({}, state, {
                     content: inType,
                     list: true,
                     localStorage: lib._.omit(state.localStorage, inType + "_" + inResponse)
