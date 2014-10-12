@@ -23,7 +23,7 @@ define(function () {
 
 		if (state.updateID !== null) {
 			// populate view item fields
-			var itemData = JSON.parse(state.localStorage[state.content + "_" + state.updateID]);
+			var itemData = state.localStorage[state.content + "_" + state.updateID];
 			for (var fld in itemData) {
 				if (fld !== "_id" && fld !== "__v") {
 					lib.$("#" + state.content + "EntryForm [name=" + fld + "]").val(itemData[fld]);

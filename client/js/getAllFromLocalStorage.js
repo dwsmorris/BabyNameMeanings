@@ -16,7 +16,7 @@ define(function () {
 		for (var itemKey in lst) {
 			if (itemKey.indexOf(inType) === 0) {
 				var sObj = lst[itemKey];
-				items.push(JSON.parse(sObj));
+				items.push(sObj);
 			}
 		}
 

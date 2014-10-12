@@ -29,7 +29,7 @@ define(function () {
 							return memo;
 						} else {
 							var entries = lib._.map(data, function(entry) {
-								return lib._.object([type + "_" + entry._id],[JSON.stringify(entry)]);
+								return lib._.object([type + "_" + entry._id],[entry]);
 							});
 
 							var extend=lib._.partial(lib._.extend, {}, memo);
