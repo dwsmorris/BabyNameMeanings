@@ -56,7 +56,7 @@ require({
 		list: true,
 		project: projectName,
 		//ajaxURLPrefix: "http://server.eu01.aws.af.cm/" + projectName + ".", // remote
-		ajaxURLPrefix: "http://127.0.0.1:80/" + projectName + ".", // local
+		ajaxURLPrefix: "http://127.0.0.1:1438/" + projectName + ".", // local
 		updateID: null, // The ID of the item being updated, or null when doing an add.
 		networkAvailable: true // Flag: is network connectivity available?
 	};
