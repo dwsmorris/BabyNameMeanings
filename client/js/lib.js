@@ -21,7 +21,7 @@ define([
 	"./loadInfoDialog",
 	"./showConnectivityMessage",
 	"./downloadServerData",
-	"./getallfromlocalstorage",
+	"./getAllFromLocalStorage",
 	"./doSave",
 	"./doDelete",
 	"./pageShowHandler",
