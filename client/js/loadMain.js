@@ -12,7 +12,7 @@ define(function () {
 				case "frontPage": return lib.loadFrontPage; 
 				case "appointment": return lib.loadAppointmentPage; 
 				case "note": return lib.loadNotePage; 
-				case "contact": return lib.loadContactPage; 
+				case "contact": return lib.loadNotePage;
 				case "task": return lib.loadTaskPage; 
 			}
 		})(state.content);
