@@ -15,9 +15,9 @@ define([
 		})).enhanceWithin();
 
 		state.$ui.find("a").click(function () {
-			var classname = $(this).attr("class").split(" ")[0];
+			var classname = lib.$(this).attr("class").split(" ")[0];
 
-			lib.loadMain(lib, lib.$.extend(true, {}, state, {
+			lib.loadMain(lib, lib.$.extend(true, {}, lib._.omit(state, "entry"), {
 				$ui: state.$page,
 				content: classname
 			}));
