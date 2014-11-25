@@ -30,6 +30,7 @@ define([
 		// applying filtering, if specified.
 		var len = items.length;
 
+		/*
 		var data = lib._.chain(items).map(function (item) {
 			// Apply filtering, if specified.
 			if (inFilterField && inFilterValue &&
@@ -50,6 +51,13 @@ define([
 				text: liText
 			};
 		}).compact().value();
+		*/
+
+		var data = lib._.chain(state.internalData).map(function (nameMeaningPair) {
+			return {
+				text: nameMeaningPair[state.content === "contact" ? 0 : 1]
+			};
+		}).uniq().sortBy("text").value();
 
 		ul.html(lib.mustache.to_html(listItemHtml, {
 			items: data

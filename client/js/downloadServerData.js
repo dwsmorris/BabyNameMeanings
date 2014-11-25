@@ -1,6 +1,10 @@
 ﻿/*globals define, $, window*/
 
-define(function () {
+define([
+	"text!../json/internalData.txt"
+], function (
+	internalData	
+) {
 
 	/**
 	 * Downloads all data from the server for all entity types at app startup,
@@ -50,7 +54,8 @@ define(function () {
 
 				lib.loadFrame(lib, lib.$.extend(true, {}, state, {
 					networkavailable: networkavailable,
-					localStorage: localStorage
+					localStorage: localStorage,
+					internalData: JSON.parse(internalData)
 				}));
 
 		};
