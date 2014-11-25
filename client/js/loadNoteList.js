@@ -12,6 +12,8 @@ define([
 		state.$ui.find("select.noteFilterCategory").change(function () {
 			lib.populateList(lib, state, "category", lib.$(this).val());
 		});
+
+		window.scrollTo(0, 0);
 	};
 
 });
