@@ -13,7 +13,8 @@ define([
 	return function (lib, state) {
 		state.$ui.html(lib.mustache.to_html(headerSectionHtml, {
 			homeButtonEnabled: state.content === "frontPage" ? "disabled" : "",
-			title: state.content === "appointment" ? "Appointments" :
+			title: state.entry !== undefined ? state.entry :
+				state.content === "appointment" ? "Appointments" :
 				state.content === "contact" ? "Names" :
 				state.content === "note" ? "Meanings" :
 				state.content === "task" ? "Tasks" : "Welcome!",

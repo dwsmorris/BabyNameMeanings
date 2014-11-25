@@ -69,7 +69,11 @@ define([
 		ul.listview("refresh");
 
 		ul.find("li").click(function () {
-			lib.viewEditItem(lib, state, lib.$(this).attr("class").split(" ")[0]);
+			//lib.viewEditItem(lib, state, lib.$(this).attr("class").split(" ")[0]);
+			lib.loadMain(lib, lib.$.extend(true, {}, state, {
+				$ui: state.$page,
+				entry: lib.$(this).text()
+			}));
 		});
 	};
 
