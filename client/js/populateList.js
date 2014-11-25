@@ -54,10 +54,12 @@ define([
 		*/
 
 		var data = lib._.chain(state.internalData).map(function (nameMeaningPair) {
+			return nameMeaningPair[state.content === "contact" ? 0 : 1];
+		}).uniq().map(function(text) {
 			return {
-				text: nameMeaningPair[state.content === "contact" ? 0 : 1]
+				text: text
 			};
-		}).uniq().sortBy("text").value();
+		}).sortBy("text").value();
 
 		ul.html(lib.mustache.to_html(listItemHtml, {
 			items: data
