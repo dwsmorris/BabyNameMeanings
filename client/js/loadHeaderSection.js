@@ -24,7 +24,7 @@ define([
 		})).enhanceWithin();
 
 		state.$ui.find(".cssHomeButton").click(function () {
-			lib.loadMain(lib, lib.$.extend(true, {}, state, {
+			lib.loadMain(lib, lib.$.extend(true, {}, lib._.omit(state, "entry"), {
 				$ui: state.$page,
 				content: "frontPage"
 			}));
