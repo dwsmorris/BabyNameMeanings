@@ -53,9 +53,15 @@ define([
 		}).compact().value();
 		*/
 
-		var data = lib._.chain(state.internalData).map(function (nameMeaningPair) {
+		var data = state.entry !== undefined ? lib._.chain(state.internalData).filter(function (nameMeaningPair) {
+			return nameMeaningPair[state.content === "contact" ? 0 : 1] === state.entry;
+		}).map(function (nameMeaningPair) {
+			return {
+				text: nameMeaningPair[state.content === "contact" ? 1 : 0]
+			};
+		}).sortBy("text").value() : lib._.chain(state.internalData).map(function (nameMeaningPair) {
 			return nameMeaningPair[state.content === "contact" ? 0 : 1];
-		}).uniq().map(function(text) {
+		}).uniq().map(function (text) {
 			return {
 				text: text
 			};
@@ -72,7 +78,8 @@ define([
 			//lib.viewEditItem(lib, state, lib.$(this).attr("class").split(" ")[0]);
 			lib.loadMain(lib, lib.$.extend(true, {}, state, {
 				$ui: state.$page,
-				entry: lib.$(this).text()
+				entry: lib.$(this).text(),
+				content: state.entry === undefined ? state.content : state.content === "contact" ? "note" : "contact"
 			}));
 		});
 	};
