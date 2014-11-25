@@ -17,7 +17,7 @@ define([
 	 *                      filtering should be applied (show all).
 	 */
 	return function (lib, state, inFilterField, inFilterValue) {
-		var inType = state.content;
+		var inType = "note";//state.content;
 
 		// Get reference to listview's UL element and remove existing children.
 		var ul = lib.$("#" + inType + "ListUL");
