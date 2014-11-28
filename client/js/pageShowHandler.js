@@ -10,7 +10,7 @@ define(function () {
 	return function (lib, state) {
 		var inType = state.content;
 
-		$.mobile.loading("show");
+		//$.mobile.loading("show");
 
 		// Populate the list.
 		lib.populateList(lib, state);
@@ -25,7 +25,7 @@ define(function () {
 			$("#" + inType + "SaveButton").button("disable");
 		}
 
-		$.mobile.loading("hide");
+		//$.mobile.loading("hide");
 	};
 
 });

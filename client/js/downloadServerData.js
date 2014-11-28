@@ -14,7 +14,7 @@ define([
 	 */
 	return function (lib, state) {
 
-		$.mobile.loading("show");
+		//$.mobile.loading("show");
 
 		// Function executed when each of the four AJAX requests returns, regardless
 		// of whether they succeeded or not.  Passed to this is the type of entity
@@ -50,7 +50,7 @@ define([
 				}
 
 				// Unmask screen and we're done here.
-				$.mobile.loading("hide");
+				//$.mobile.loading("hide");
 
 				lib.loadFrame(lib, lib.$.extend(true, {}, state, {
 					networkavailable: networkavailable,

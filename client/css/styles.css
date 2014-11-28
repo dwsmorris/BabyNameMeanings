@@ -1,3 +1,9 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
 /* Style for the title header (horizontally and vertically centered). */
 .cssHomeTitleHeader {
   position : absolute;
@@ -14,6 +20,9 @@
   padding-top : 20px;
 }
 
+#homePage {
+	background-color: white;
+}
 
 /* Style to space out Home button. */
 .cssHomeButton {
@@ -34,6 +43,15 @@
   box-shadow : none!important;
   -moz-box-shadow : none!important;
   -webkit-box-shadow : none!important;
+}
+
+.footer {
+	height: 10px;
+}
+
+.cssNavBar a {
+	  font-size: 16px!important;
+	  padding-bottom: 30px;
 }
 
 
