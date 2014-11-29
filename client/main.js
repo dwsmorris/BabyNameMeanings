@@ -17,14 +17,15 @@ require({
 	"underscore",
 	"./js/lib",
 	"./thirdParty/mustache",
-	"./thirdParty/async"
+	"./thirdParty/async",
+	"css!thirdParty/jquery.mobile-1.4.3.css",
+	"css!styles/styles.css"
 ], function (
 	_,
 	customLib,
 	mustache,
 	async
 ) {
-	
 	/**
  * The prefix that is used to form the URL all AJAX requests go to.  When
  * developing on the desktop this should be http://127.0.0.1:80 or wherever
