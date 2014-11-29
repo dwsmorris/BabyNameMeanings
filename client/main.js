@@ -18,9 +18,11 @@ require({
 	"./js/lib",
 	"./thirdParty/mustache",
 	"./thirdParty/async",
+	"./thirdParty/cordova-2.5.0.js",
 	"css!thirdParty/jquery.mobile-1.4.3.css",
 	"css!styles/styles.css"
-], function (
+], function (	
+
 	_,
 	customLib,
 	mustache,
