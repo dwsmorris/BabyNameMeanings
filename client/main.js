@@ -20,8 +20,8 @@ require({
 			deps: ["jquery"]
 		},
 		jquerymobile: {
-			deps: ["jquerymobileconfig"]/*,
-			exports: 'jquery'*/
+			deps: ["jquerymobileconfig"],
+			exports: 'jquery'
 		}
 	},
 	//priority: ['jquery', "jquerymobileconfig", 'jquerymobile'],
@@ -58,6 +58,16 @@ require({
  * you need to open about:config and set security.fileuri.strict_origin_policy
  * to false.
  */
+	// don't forget to trigger JQM manually
+	if ($.mobile.autoInitializePage == false) {
+		$.mobile.initializePage();
+	}
+
+	// Prevents all anchor click handling
+	//$.mobile.linkBindingEnabled = false;
+
+	// Disabling this will prevent jQuery Mobile from handling hash changes
+	//$.mobile.hashListeningEnabled = false;
 
 	var lib = $.extend(true, {}, customLib, {
 		$: $,
