@@ -20,11 +20,11 @@ require({
 			deps: ["jquery"]
 		},
 		jquerymobile: {
-			deps: ["jquerymobileconfig"],
-			exports: 'jquery'
+			deps: ["jquerymobileconfig"]/*,
+			exports: 'jquery'*/
 		}
 	},
-	priority: ['jquery', "jquerymobileconfig", 'jquerymobile'],
+	//priority: ['jquery', "jquerymobileconfig", 'jquerymobile'],
 	urlArgs: "bust=" + (new Date()).getTime()
 }, [
 	"jquery",
