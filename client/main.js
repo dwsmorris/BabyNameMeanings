@@ -2,7 +2,10 @@
 
 require({
 	paths: {
-		underscore: "thirdParty/underscore-1.6.0"
+		underscore: "thirdParty/underscore-1.6.0",
+		jquery: "thirdParty/jquery-2.0.3",
+		jquerymobileconfig: "js/setup",
+		jquerymobile: "thirdParty/jquery.mobile-1.4.3"
 	},
 	map: {
 		"*": {
@@ -12,17 +15,28 @@ require({
 			image: "thirdParty/image"*/
 		}
 	},
+	shim: {
+		jquerymobileconfig: {
+			deps: ["jquery"]
+		},
+		jquerymobile: {
+			deps: ["jquerymobileconfig"]
+		}
+	},
 	urlArgs: "bust=" + (new Date()).getTime()
 }, [
+	"jquery",
 	"underscore",
 	"./js/lib",
 	"./thirdParty/mustache",
 	"./thirdParty/async",
+	"jquerymobile",
+	"jquerymobileconfig",
 	"./thirdParty/cordova-2.5.0.js",
 	"css!thirdParty/jquery.mobile-1.4.3.css",
 	"css!styles/styles.css"
-], function (	
-
+], function (
+	$,
 	_,
 	customLib,
 	mustache,
