@@ -46,7 +46,7 @@ define([
 					// a connectivity problem, so let the user know what's up.  Whatever
 					// data is in localStorage will be used for this run.
 					networkavailable = false;
-					lib.showConnectivityMessage(lib, state);
+					//lib.showConnectivityMessage(lib, state);
 				}
 
 				// Unmask screen and we're done here.
@@ -61,9 +61,10 @@ define([
 		};
 
 		// Get all data.
-		$.ajax({ url: state.ajaxURLPrefix })
-		.done(function (inResponse) { completeLoad(inResponse); })
-		.fail(function (inXHR, inStatus) { completeLoad(null); });
+		//$.ajax({ url: state.ajaxURLPrefix })
+		//.done(function (inResponse) { completeLoad(inResponse); })
+		//.fail(function (inXHR, inStatus) { completeLoad(null); });
+		completeLoad(null);
 	};
 
 });

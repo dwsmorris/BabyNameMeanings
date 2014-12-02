@@ -100,15 +100,15 @@ require({
 
 	// If we're running inside PhoneGap then we can determine if we have
 	// connectivity up-front without trying the fetches.
-	if (navigator && navigator.connection &&
-	  navigator.connection.type === Connection.NONE
-	) {
-		lib.showConnectivityMessage(lib, state);
-		lib.loadFrame(lib, lib.$.extend(true, {}, state, {
-			networkavailable: false
-		}));
-	} else {
+	//if (navigator && navigator.connection &&
+	//  navigator.connection.type === Connection.NONE
+	//) {
+	//	lib.showConnectivityMessage(lib, state);
+	//	lib.loadFrame(lib, lib.$.extend(true, {}, state, {
+	//		networkavailable: false
+	//	}));
+	//} else {
 		lib.downloadServerData(lib, state);
-	}
+	//}
 
 });
